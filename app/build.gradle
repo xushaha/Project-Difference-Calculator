@@ -1,35 +1,48 @@
 plugins {
-    id 'java'
     id 'application'
+    id 'checkstyle'
+    id 'com.adarshr.test-logger' version '3.0.0'
+    id 'com.github.ben-manes.versions' version '0.39.0'
+    id 'jacoco'
 }
 
-application {
-    mainClass = 'hexlet.code.App'
-}
-
-group 'hexlet.code'
-version '1.0-SNAPSHOT'
+group = 'hexlet.code'
+version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
-    implementation 'info.picocli:picocli:4.7.0'
-}
-
-test {
-    useJUnitPlatform()
 }
 
 compileJava {
     options.release = 17
 }
 
+application {
+    mainClass = 'hexlet.code.App'
+}
 
+dependencies {
+    implementation 'com.google.guava:guava:31.0.1-jre'
+    implementation 'info.picocli:picocli:4.6.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.0'
 
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.1'
+    testImplementation 'org.assertj:assertj-core:3.21.0'
+    testImplementation 'org.skyscreamer:jsonassert:1.5.0'
+}
 
+test {
+    useJUnitPlatform()
+}
 
+jacocoTestReport {
+    reports {
+        xml.required = true
+    }
+}
 
+checkstyle {
+    toolVersion '9.0'
+}
