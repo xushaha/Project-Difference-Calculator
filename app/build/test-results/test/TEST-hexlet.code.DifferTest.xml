@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hexlet.code.DifferTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-01-12T15:28:56" hostname="xushaha-All-Series" time="0.658">
+  <properties/>
+  <testcase name="testGenerate1()" classname="hexlet.code.DifferTest" time="0.648"/>
+  <testcase name="testGenerate2()" classname="hexlet.code.DifferTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
