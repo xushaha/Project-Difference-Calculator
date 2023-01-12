@@ -91,13 +91,13 @@ public class Differ {
                 Object newValue = a.getNewValue();
                 switch (status) {
                     case ADDED ->
-                        result.append("+ ").append(items.getKey()).append(": ").append(value).append("\n");
-                    case REMOVED -> result.append("- ").append(items.getKey()).append(": ").append(value).append("\n");
+                        result.append("  + ").append(items.getKey()).append(": ").append(value).append("\n");
+                    case REMOVED -> result.append("  - ").append(items.getKey()).append(": ").append(value).append("\n");
                     case UNCHANGED ->
-                        result.append("  ").append(items.getKey()).append(": ").append(value).append("\n");
+                        result.append("    ").append(items.getKey()).append(": ").append(value).append("\n");
                     case CHANGED -> {
-                        result.append("- ").append(items.getKey()).append(": ").append(oldValue).append("\n");
-                        result.append("+ ").append(items.getKey()).append(": ").append(newValue).append("\n");
+                        result.append("  - ").append(items.getKey()).append(": ").append(oldValue).append("\n");
+                        result.append("  + ").append(items.getKey()).append(": ").append(newValue).append("\n");
                     }
                     default -> throw new IllegalStateException("Unexpected value: " + status);
                 }
