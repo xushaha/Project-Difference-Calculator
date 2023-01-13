@@ -37,7 +37,7 @@ dependencies {
             'com.google.guava:guava:31.0.1-jre',
             'info.picocli:picocli:4.6.1',
             'com.fasterxml.jackson.core:jackson-databind:2.13.0',
-            'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.0'
+            'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.4'
     )
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
