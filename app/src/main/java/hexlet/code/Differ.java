@@ -108,7 +108,7 @@ public class Differ {
                     default -> throw new IllegalStateException("Unexpected value: " + status);
                 }
             }
-            result.append("}" + "\n");
+            result.append("}");
         }
         return result.toString();
     }
