@@ -7,35 +7,37 @@ public class Status {
     public static final String CHANGED = "changed";
     public static final String UNCHANGED = "unchanged";
 
-    String status;
-    Object oldValue;
-    Object newValue;
-    Object sameValue;
+    private String status;
+    private Object oldValue;
+    private Object newValue;
 
-    public Status(String status, Object oldValue, Object newValue) {
-        this.status = status;
-        this.oldValue = oldValue;
-        this.newValue = newValue;
+
+    public Status(String status1, Object oldValue1, Object newValue1) {
+        this.status = status1;
+        this.oldValue = oldValue1;
+        this.newValue = newValue1;
     }
 
-    public Status(String status, Object sameValue) {
-        this.status = status;
-        this.sameValue = sameValue;
+    public Status(String status1, Object sameValue) {
+        this.status = status1;
+        if (status.equals(ADDED)) {
+            this.newValue = sameValue;
+        } else {
+            this.oldValue = sameValue;
+        }
     }
+
 
     public String getStatus() {
-        return this.status;
+        return status;
     }
 
     public Object getOldValue() {
-        return this.oldValue;
+        return oldValue;
     }
 
     public Object getNewValue() {
-        return this.newValue;
+        return newValue;
     }
 
-    public Object getSameValue() {
-        return this.sameValue;
-    }
 }

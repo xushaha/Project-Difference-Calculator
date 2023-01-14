@@ -15,22 +15,21 @@ public class Stylish {
 
                 String key = entry.getKey();
                 String status = entry.getValue().getStatus();
-                Object value = entry.getValue().getSameValue();
                 Object oldValue = entry.getValue().getOldValue();
                 Object newValue = entry.getValue().getNewValue();
 
                 switch (status) {
                     case Status.ADDED ->
-                        result.append("  + ").append(key).append(": ").append(value).append("\n");
+                        result.append("  + ").append(key).append(": ").append(newValue).append("\n");
                     case Status.REMOVED ->
-                        result.append("  - ").append(key).append(": ").append(value).append("\n");
+                        result.append("  - ").append(key).append(": ").append(oldValue).append("\n");
                     case Status.UNCHANGED ->
-                        result.append("    ").append(key).append(": ").append(value).append("\n");
+                        result.append("    ").append(key).append(": ").append(oldValue).append("\n");
                     case Status.CHANGED -> {
                         result.append("  - ").append(key).append(": ").append(oldValue).append("\n");
                         result.append("  + ").append(key).append(": ").append(newValue).append("\n");
                     }
-                    default -> throw new IllegalStateException("Unexpected value: " + status);
+                    default -> throw new IllegalStateException("Unknown status: " + status);
                 }
             }
             result.append("}");
