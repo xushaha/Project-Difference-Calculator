@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hexlet.code.DifferTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-01-13T12:54:23" hostname="xushaha-All-Series" time="0.718">
-  <properties/>
-  <testcase name="testJsonGenerate1()" classname="hexlet.code.DifferTest" time="0.647"/>
-  <testcase name="testJsonGenerate2()" classname="hexlet.code.DifferTest" time="0.002"/>
-  <testcase name="testYamlGenerate1()" classname="hexlet.code.DifferTest" time="0.065"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
