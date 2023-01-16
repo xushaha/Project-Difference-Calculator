@@ -9,6 +9,9 @@
 
 
 
+Application compares two configuration files and shows a difference:
+
+
 Calculate difference in "stylish" format
 
 [![asciicast](https://asciinema.org/a/1cJ4bgTS8pssQg6PD9KnPPz9I.svg)](https://asciinema.org/a/1cJ4bgTS8pssQg6PD9KnPPz9I)
