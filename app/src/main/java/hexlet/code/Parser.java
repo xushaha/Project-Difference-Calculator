@@ -7,7 +7,7 @@ import java.util.Map;
 public class Parser {
 
     //выбираем парсер в зав-ти от формата
-    public static Map parser(String content, String dataFormat) throws Exception {
+    public static Map<String, Object> parser(String content, String dataFormat) throws Exception {
 
         switch (dataFormat.toUpperCase()) {
             case "JSON" -> {
@@ -22,13 +22,13 @@ public class Parser {
 
 
     //парсинг (строку в мапу) JSON
-    public static Map parserJSON(String content) throws Exception {
+    public static Map<String, Object> parserJSON(String content) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         return mapper.readValue(content, Map.class);
     }
 
     //парсинг (строку в мапу) YAML
-    public static Map parserYAML(String content) throws Exception {
+    public static Map<String, Object> parserYAML(String content) throws Exception {
         ObjectMapper mapper = new YAMLMapper();
         return mapper.readValue(content, Map.class);
     }

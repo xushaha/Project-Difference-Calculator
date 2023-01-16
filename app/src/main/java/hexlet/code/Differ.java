@@ -18,23 +18,20 @@ public class Differ {
         Map<String, Object> map1 = generateMapFromFile(filePath1);
         Map<String, Object> map2 = generateMapFromFile(filePath2);
 
-        Set<String> keys = new TreeSet<>();
-        keys.addAll(map1.keySet());
+        Set<String> keys = new TreeSet<>(map1.keySet());
         keys.addAll(map2.keySet());
 
         // результирующая мапа
         Map<String, Status> result = new TreeMap<>();
 
         for (String key : keys) {
+
             Object value1 = map1.get(key);
             Object value2 = map2.get(key);
             String value1ToString = String.valueOf(value1);
             String value2ToString = String.valueOf(value2);
 
-
             if (!map1.containsKey(key)) {
-
-
                 result.put(key, new Status(Status.ADDED, value2));
 
             } else if (!map2.containsKey(key)) {
@@ -75,7 +72,7 @@ public class Differ {
         String content1 = Files.readString(path);
 
         // Строку в мапу (парсинг)
-        return (Map<String, Object>) parser(content1, dataFormat);
+        return parser(content1, dataFormat);
     }
 
 }
