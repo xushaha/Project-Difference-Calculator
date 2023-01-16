@@ -28,9 +28,3 @@ Calculate difference in "plain" format
 Calculate difference in JSON format
 
 [![asciicast](https://asciinema.org/a/tfbL4z1L22j93QtmFJrwrmkj2.svg)](https://asciinema.org/a/tfbL4z1L22j93QtmFJrwrmkj2)
-
-
-
-Calculate difference in JSON format
-
-[![asciicast](https://asciinema.org/a/tfbL4z1L22j93QtmFJrwrmkj2.svg)](https://asciinema.org/a/tfbL4z1L22j93QtmFJrwrmkj2)
