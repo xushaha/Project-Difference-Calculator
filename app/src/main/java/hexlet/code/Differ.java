@@ -18,26 +18,35 @@ public class Differ {
         Map<String, Object> map1 = generateMapFromFile(filePath1);
         Map<String, Object> map2 = generateMapFromFile(filePath2);
 
+        Set<String> keys = new TreeSet<>();
+        keys.addAll(map1.keySet());
+        keys.addAll(map2.keySet());
+
         // результирующая мапа
         Map<String, Status> result = new TreeMap<>();
 
-        Set<String> keys = new TreeSet<>(map1.keySet());
-        keys.addAll(map2.keySet());
-
         for (String key : keys) {
+            Object value1 = map1.get(key);
+            Object value2 = map2.get(key);
+            String value1ToString = String.valueOf(value1);
+            String value2ToString = String.valueOf(value2);
+
+
             if (!map1.containsKey(key)) {
-                result.put(key, new Status(Status.ADDED, map2.get(key)));
+
+
+                result.put(key, new Status(Status.ADDED, value2));
 
             } else if (!map2.containsKey(key)) {
-                result.put(key, new Status(Status.REMOVED, map1.get(key)));
+                result.put(key, new Status(Status.REMOVED, value1));
 
             } else if (map1.containsKey(key) && map2.containsKey(key)) {
-                if (String.valueOf(map1.get(key)).equals(String.valueOf(map2.get(key)))) {
-                    result.put(key, new Status(Status.UNCHANGED, (map1.get(key))));
+                if (value1ToString.equals(value2ToString)) {
+                    result.put(key, new Status(Status.UNCHANGED, (value1)));
 
-                } else if (!(String.valueOf(map1.get(key)).equals(String.valueOf((map2.get(key)))))) {
-                    result.put(key, new Status(Status.CHANGED, map1.get(key),
-                        map2.get(key)));
+                } else {
+                    result.put(key, new Status(Status.CHANGED, value1,
+                        value2));
                 }
             }
         }
