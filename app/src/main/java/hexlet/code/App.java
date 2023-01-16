@@ -35,7 +35,7 @@ public class App implements Callable<Integer> {
         private String formatName;*/
 
     @Override
-    public Integer call() {
+    public final Integer call() {
         try {
             String formattedDiff = Differ.generate(filePath1, filePath2, formatName);
             System.out.println(formattedDiff);
