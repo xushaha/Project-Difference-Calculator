@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
@@ -16,34 +15,34 @@ public class Differ {
     static String generate(String filePath1, String filePath2, String formatName) throws Exception {
 
             // получаем мапу (парсинг)
-            Map<String, Object> map1 = generateMapFromFile(filePath1);
-            Map<String, Object> map2 = generateMapFromFile(filePath2);
+        Map<String, Object> map1 = generateMapFromFile(filePath1);
+        Map<String, Object> map2 = generateMapFromFile(filePath2);
 
             // результирующая мапа
-            Map<String, Status> result = new TreeMap<>();
+        Map<String, Status> result = new TreeMap<>();
 
-            Set<String> keys = new TreeSet<>(map1.keySet());
-            keys.addAll(map2.keySet());
+        Set<String> keys = new TreeSet<>(map1.keySet());
+        keys.addAll(map2.keySet());
 
-            for (String key : keys) {
-                if (!map1.containsKey(key)) {
-                    result.put(key, new Status(Status.ADDED, map2.get(key)));
+        for (String key : keys) {
+            if (!map1.containsKey(key)) {
+                result.put(key, new Status(Status.ADDED, map2.get(key)));
 
-                } else if (!map2.containsKey(key)) {
-                    result.put(key, new Status(Status.REMOVED, map1.get(key)));
+            } else if (!map2.containsKey(key)) {
+                result.put(key, new Status(Status.REMOVED, map1.get(key)));
 
-                } else if (map1.containsKey(key) && map2.containsKey(key)) {
-                    if (String.valueOf(map1.get(key)).equals(String.valueOf(map2.get(key)))) {
-                        result.put(key, new Status(Status.UNCHANGED, (map1.get(key))));
+            } else if (map1.containsKey(key) && map2.containsKey(key)) {
+                if (String.valueOf(map1.get(key)).equals(String.valueOf(map2.get(key)))) {
+                    result.put(key, new Status(Status.UNCHANGED, (map1.get(key))));
 
-                    } else if (!(String.valueOf(map1.get(key)).equals(String.valueOf((map2.get(key)))))) {
-                        result.put(key, new Status(Status.CHANGED, map1.get(key),
-                            map2.get(key)));
-                    }
+                } else if (!(String.valueOf(map1.get(key)).equals(String.valueOf((map2.get(key)))))) {
+                    result.put(key, new Status(Status.CHANGED, map1.get(key),
+                        map2.get(key)));
                 }
             }
+        }
 
-            return formatter(result, formatName);
+        return formatter(result, formatName);
 
     }
 
