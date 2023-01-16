@@ -5,14 +5,17 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/9bc7fe93bfcb11c64096/test_coverage)](https://codeclimate.com/github/xushaha/java-project-71/test_coverage)
 
+
 Calculate difference in "stylish" format
 
 [![asciicast](https://asciinema.org/a/1cJ4bgTS8pssQg6PD9KnPPz9I.svg)](https://asciinema.org/a/1cJ4bgTS8pssQg6PD9KnPPz9I)
 
 
+
 Calculate difference in "plain" format
 
 [![asciicast](https://asciinema.org/a/f5BI3qMzw1kmd0ptvPcmu6uc4.svg)](https://asciinema.org/a/f5BI3qMzw1kmd0ptvPcmu6uc4)
+
 
 Calculate difference in JSON format
 
