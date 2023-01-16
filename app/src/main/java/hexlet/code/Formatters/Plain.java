@@ -22,9 +22,11 @@ public class Plain {
                     case Status.ADDED -> {
                         String addedValue = formatter(value.getNewValue());
                         result.append("Property '").append(key).append("' was added with value: ")
-                            .append(addedValue).append("\n");}
+                            .append(addedValue).append("\n");
+                    }
                     case Status.REMOVED -> {
-                        result.append("Property '").append(key).append("' was removed").append("\n");}
+                        result.append("Property '").append(key).append("' was removed").append("\n");
+                    }
                     case Status.CHANGED -> {
                         String removedValue = formatter(value.getOldValue());
                         String addedValue = formatter(value.getNewValue());

@@ -64,7 +64,7 @@ public class Differ {
                 }
             }
 
-            return formatter(result,formatName);
+            return formatter(result, formatName);
 
 
         } else {
