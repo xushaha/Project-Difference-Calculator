@@ -12,7 +12,7 @@ import static hexlet.code.Parser.parser;
 
 public class Differ {
 
-    static String generate(String filePath1, String filePath2, String formatName) throws Exception {
+    public static String generate(String filePath1, String filePath2, String formatName) throws Exception {
 
             // получаем мапу (парсинг)
         Map<String, Object> map1 = generateMapFromFile(filePath1);
