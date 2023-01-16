@@ -55,11 +55,11 @@ public class Differ {
 
                 } else if (map1.containsKey(key) && map2.containsKey(key)) {
                     if (String.valueOf(map1.get(key)).equals(String.valueOf(map2.get(key)))) {
-                        result.put(key, new Status(Status.UNCHANGED, String.valueOf((map1.get(key)))));
+                        result.put(key, new Status(Status.UNCHANGED, (map1.get(key))));
 
                     } else if (!(String.valueOf(map1.get(key)).equals(String.valueOf((map2.get(key)))))) {
-                        result.put(key, new Status(Status.CHANGED, String.valueOf(map1.get(key)),
-                            String.valueOf(map2.get(key))));
+                        result.put(key, new Status(Status.CHANGED, map1.get(key),
+                            map2.get(key)));
                     }
                 }
             }
