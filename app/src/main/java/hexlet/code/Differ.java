@@ -14,11 +14,11 @@ public class Differ {
 
     public static String generate(String filePath1, String filePath2, String formatName) throws Exception {
 
-            // получаем мапу (парсинг)
+        // получаем мапу (парсинг)
         Map<String, Object> map1 = generateMapFromFile(filePath1);
         Map<String, Object> map2 = generateMapFromFile(filePath2);
 
-            // результирующая мапа
+        // результирующая мапа
         Map<String, Status> result = new TreeMap<>();
 
         Set<String> keys = new TreeSet<>(map1.keySet());
@@ -44,6 +44,10 @@ public class Differ {
 
         return formatter(result, formatName);
 
+    }
+
+    public static String generate(String filepath1, String filepath2) throws Exception {
+        return Differ.generate(filepath1, filepath2, "stylish");
     }
 
     public static Map<String, Object> generateMapFromFile(String filePath) throws Exception {

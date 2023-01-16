@@ -10,7 +10,7 @@ import static hexlet.code.Formatters.Stylish.formatToStylish;
 
 public class Formatter {
 
-    public static String formatter(Map<String, Status> result, String formatName) {
+    public static String formatter(Map<String, Status> result, String formatName) throws Exception {
 
 
         switch (formatName.toUpperCase()) {
@@ -24,7 +24,7 @@ public class Formatter {
                 return formatToStylish(result);
             }
             default -> {
-                return formatToStylish(result);
+                throw new Exception("Error: unknown format name: " + formatName);
             }
         }
 

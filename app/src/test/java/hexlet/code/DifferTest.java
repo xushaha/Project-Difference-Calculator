@@ -66,4 +66,23 @@ public class DifferTest {
         String actualResult = Differ.generate(filePath1, filePath2, formatName);
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    void testJsonGenerateDefault() throws Exception {
+        String expectedResult = Files.readString(Path.of("src/test/resources/Expected_Stylish.txt"));
+        String filePath1 = ("src/test/resources/jsonTest_1.json");
+        String filePath2 = ("src/test/resources/jsonTest_2.json");
+        String actualResult = Differ.generate(filePath1, filePath2);
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    void testYamlGenerateDefault() throws Exception {
+        String expectedResult = Files.readString(Path.of("src/test/resources/Expected_Stylish.txt"));
+        String filePath1 = ("src/test/resources/yamlTest_1.yaml");
+        String filePath2 = ("src/test/resources/yamlTest_2.yaml");
+        String actualResult = Differ.generate(filePath1, filePath2);
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
 }
