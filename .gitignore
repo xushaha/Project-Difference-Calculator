@@ -1,2 +1,6 @@
 app/.gradle
 app/.idea
+/app/yamlTest1.yaml
+/app/yamlTest2.yaml
+/app/jsonTest1.json
+/app/jsonTest2.json
