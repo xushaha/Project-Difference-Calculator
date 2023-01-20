@@ -24,14 +24,6 @@ application {
 }
 
 dependencies {
-    implementation 'com.google.guava:guava:31.0.1-jre'
-    implementation 'info.picocli:picocli:4.6.1'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
-    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.0'
-
-}
-
-dependencies {
     implementation(
             'org.apache.commons:commons-lang3:3.12.0',
             'com.google.guava:guava:31.0.1-jre',
