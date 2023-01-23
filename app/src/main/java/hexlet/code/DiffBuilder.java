@@ -41,9 +41,11 @@ public class DiffBuilder {
 
     public static boolean isEqual(Object val1, Object val2) {
 
-        if (!(val1 == null && val2 == null) && !(Objects.equals(val1, val2))) {
+        if (val1 == null && val2 == null) {
+            return true;
+        } else if (val1 == null || val2 == null) {
             return false;
-        } else if (!(val1 == null && val2 == null) && val1.equals(val2)) {
+        } else if (Objects.equals(val1, val2)) {
             return true;
         }
         return false;
