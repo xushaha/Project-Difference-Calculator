@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 
 public class DiffBuilder {
 
@@ -39,6 +36,12 @@ public class DiffBuilder {
     }
 
     public static boolean isEqual(Object val1, Object val2) {
-        return (String.valueOf(val1)).equals((String.valueOf(val2)));
+
+        if (!(val1 == null && val2 == null) && !(Objects.equals(val1, val2))) {
+            return false;
+        } else if (!(val1 == null && val2 == null) && val1.equals(val2)) {
+            return true;
+        }
+        return false;
     }
 }
