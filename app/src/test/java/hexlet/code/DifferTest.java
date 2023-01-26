@@ -12,14 +12,14 @@ public class DifferTest {
     public DifferTest() throws IOException {
     }
 
-    String expectedStylishResult = Files.readString(Path.of("src/test/resources/Expected_Stylish.txt"));
-    String expectedPlainResult = Files.readString(Path.of("src/test/resources/Expected_Plain.txt"));
-    String expectedJSONResult = Files.readString(Path.of("src/test/resources/Expected_JSON.txt"));
+    private final String expectedStylishResult = Files.readString(Path.of("src/test/resources/Expected_Stylish.txt"));
+    private final String expectedPlainResult = Files.readString(Path.of("src/test/resources/Expected_Plain.txt"));
+    private final String expectedJSONResult = Files.readString(Path.of("src/test/resources/Expected_JSON.txt"));
 
-    String JSONFilePath1 = ("src/test/resources/jsonTest_1.json");
-    String JSONFilePath2 = ("src/test/resources/jsonTest_2.json");
-    String YAMLFilePath1 = ("src/test/resources/yamlTest_1.yaml");
-    String YAMLFilePath2 = ("src/test/resources/yamlTest_2.yaml");
+    private final String JSONFilePath1 = ("src/test/resources/jsonTest_1.json");
+    private final String JSONFilePath2 = ("src/test/resources/jsonTest_2.json");
+    private final String YAMLFilePath1 = ("src/test/resources/yamlTest_1.yaml");
+    private final String YAMLFilePath2 = ("src/test/resources/yamlTest_2.yaml");
 
 
     @Test

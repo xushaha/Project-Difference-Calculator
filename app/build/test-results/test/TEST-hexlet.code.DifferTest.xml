@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hexlet.code.DifferTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-01-26T11:43:05" hostname="xushaha-All-Series" time="0.765">
+<testsuite name="hexlet.code.DifferTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-01-26T11:47:35" hostname="xushaha-All-Series" time="0.857">
   <properties/>
-  <testcase name="testJsonGenerateStylish()" classname="hexlet.code.DifferTest" time="0.584"/>
-  <testcase name="testYamlGenerateJSON()" classname="hexlet.code.DifferTest" time="0.132"/>
-  <testcase name="testJsonGeneratePlain()" classname="hexlet.code.DifferTest" time="0.011"/>
-  <testcase name="testYamlGenerateDefault()" classname="hexlet.code.DifferTest" time="0.007"/>
-  <testcase name="testYamlGeneratePlain()" classname="hexlet.code.DifferTest" time="0.006"/>
-  <testcase name="testJsonGenerateDefault()" classname="hexlet.code.DifferTest" time="0.004"/>
+  <testcase name="testJsonGenerateStylish()" classname="hexlet.code.DifferTest" time="0.661"/>
+  <testcase name="testYamlGenerateJSON()" classname="hexlet.code.DifferTest" time="0.127"/>
+  <testcase name="testJsonGeneratePlain()" classname="hexlet.code.DifferTest" time="0.008"/>
+  <testcase name="testYamlGenerateDefault()" classname="hexlet.code.DifferTest" time="0.02"/>
+  <testcase name="testYamlGeneratePlain()" classname="hexlet.code.DifferTest" time="0.007"/>
+  <testcase name="testJsonGenerateDefault()" classname="hexlet.code.DifferTest" time="0.003"/>
   <testcase name="testYamlGenerateStylish()" classname="hexlet.code.DifferTest" time="0.006"/>
-  <testcase name="testJsonGenerateJSON()" classname="hexlet.code.DifferTest" time="0.006"/>
+  <testcase name="testJsonGenerateJSON()" classname="hexlet.code.DifferTest" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
