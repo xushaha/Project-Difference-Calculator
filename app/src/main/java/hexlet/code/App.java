@@ -29,10 +29,6 @@ public class App implements Callable<Integer> {
                 description = "path to second file")
         private String filePath2;
 
-/*    @Parameters(paramLabel = "formatName",
-                index = "2",
-                description = "name of format")
-        private String formatName;*/
 
     @Override
     public final Integer call() {

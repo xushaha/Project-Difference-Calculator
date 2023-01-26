@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.util.Map;
 
 import static hexlet.code.DiffBuilder.genDiff;
-import static hexlet.code.Formatters.Format.formatter;
+import static hexlet.code.Formatters.Format.formatResult;
 
 public class Differ {
 
@@ -17,7 +17,7 @@ public class Differ {
         Map<String, Object> map1 = getData(filePath1);
         Map<String, Object> map2 = getData(filePath2);
 
-        return formatter(genDiff(map1, map2), formatName);
+        return formatResult(genDiff(map1, map2), formatName);
 
     }
 
